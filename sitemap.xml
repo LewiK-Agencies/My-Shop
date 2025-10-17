@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+    <url><loc>https://yourusername.github.io/my-ecommerce-site/</loc></url>
+    <url><loc>https://yourusername.github.io/my-ecommerce-site/products.html</loc></url>
+    <url><loc>https://yourusername.github.io/my-ecommerce-site/cart.html</loc></url>
+    <url><loc>https://yourusername.github.io/my-ecommerce-site/checkout.html</loc></url>
+    <url><loc>https://yourusername.github.io/my-ecommerce-site/about.html</loc></url>
+    <url><loc>https://yourusername.github.io/my-ecommerce-site/contact.html</loc></url>
+    <!-- Add product-detail pages if static -->
+</urlset>
