@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Detailed view of our Smartphone - Features and specs.">
+    <meta name="keywords" content="smartphone, product details, buy online">
+    <title>My eCommerce Store - Product Detail</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <header><!-- Same nav --></header>
+    <main>
+        <h1>Product Detail</h1>
+        <div id="product-detail">
+            <!-- JS will populate this -->
+        </div>
+        <button onclick="addToCartFromDetail()">Add to Cart</button>
+    </main>
+    <footer><!-- Same --></footer>
+    <script src="js/script.js"></script>
+    <script>
+        // Sample product data (expand this array for more)
+        const products = [
+            { id: 1, name: 'Smartphone', price: 499, description: 'High-end model with great camera.', img: 'images/product1.jpg' },
+            { id: 2, name: 'Laptop', price: 999, description: 'Powerful processor for work and gaming.', img: 'images/product2.jpg' }
+        ];
+        const urlParams = new URLSearchParams(window.location.search);
+        const productId = parseInt(urlParams.get('id'));
+        const product = products.find(p => p.id === productId);
+        if (product) {
+            document.getElementById('product-detail').innerHTML = `
+                <img src="${product.img}" alt="${product.name} - ${product.description}">
+                <h2>${product.name}</h2>
+                <p>$${product.price}</p>
+                <p>${product.description}</p>
+            `;
+        }
+        function addToCartFromDetail() {
+            if (product) addToCart(product.name, product.price);
+        }
+    </script>
+</body>
+</html>
